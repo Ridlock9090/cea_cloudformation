@@ -107,11 +107,18 @@ Resources:
       DestinationCidrBlock: '0.0.0.0/0'
       GatewayId: !Ref InternetGateway
   
-  # Route Table Association
+  # Route Table Association 1A
   PublicSubnet1ARouteTableAssociation:
     Type: 'AWS::EC2::SubnetRouteTableAssociation'
     Properties: 
       SubnetId: !Ref PublicSubnet1A
+      RouteTableId: !Ref PublicRouteTable
+
+  # Route Table Association 2B
+  PublicSubnet2BRouteTableAssociation:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties: 
+      SubnetId: !Ref PublicSubnet2B
       RouteTableId: !Ref PublicRouteTable
   
   # Application Load Balancer
@@ -131,6 +138,9 @@ Resources:
       VpcId: !Ref MyVPC
       Port: 80
       Protocol: 'HTTP'
+      Targets:
+        - Id: !Ref WebServerInstance1A
+        - Id: !Ref WebServerInstance2B
 
   # Web Server Security Group
   WebServerSecurityGroup:
