@@ -145,7 +145,7 @@ Resources:
         - IpProtocol: tcp
           FromPort: 22
           ToPort: 22
-          CidrIp: 99.247.10.28/32
+          CidrIp: #Place_your_own_Public_Ip_address/32
 
   # AppInstance1A
   AppInstance1A:
