@@ -1,4 +1,4 @@
 # cea-cloudformation
-2nd commit
-Making changes from sub-a
-Submit here
+Site for my own CloudFormation Templates throughout the learning process. 
+
+
