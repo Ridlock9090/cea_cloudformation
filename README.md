@@ -72,7 +72,7 @@ The template defines a single RDS database instance (rdsDBInstance) with a stora
 ---
 
 **7. s3-bucket.yaml**
--This AWS CloudFormation template creates an Amazon S3 bucket.
+- This AWS CloudFormation template creates an Amazon S3 bucket.
 
 Summary:
 The template defines a single S3 bucket resource (`S3Bucket`) with the name `ridlock-s3-bucket-yaml`. This setup allows for the storage and management of objects in the cloud, providing a scalable and durable solution for data storage. The configuration is straightforward, focusing on establishing a specific S3 bucket for various storage needs.
@@ -80,7 +80,7 @@ The template defines a single S3 bucket resource (`S3Bucket`) with the name `rid
 ---
 
 **8. s3-staticsite.yaml**
--This AWS CloudFormation template sets up an S3 bucket for static website hosting.
+- This AWS CloudFormation template sets up an S3 bucket for static website hosting.
 
 Summary:
 The template defines an S3 bucket (`MyS3Bucket`) named `ridlock-s3-static-site`, configured for website hosting with `index.html` as the index document. It allows public access by setting `RestrictPublicBuckets` to false. Additionally, a bucket policy (`BucketPolicy`) is created to permit public read access (`s3:GetObject`) to all objects within the bucket, enabling users to access the hosted website content. This configuration effectively establishes a public static website on S3.
@@ -95,7 +95,7 @@ The template creates a VPC (`MyVPC`) with a CIDR block of `172.16.0.0/16`, enabl
 ---
 
 **10. vpc.yaml**
-This AWS CloudFormation template sets up a complete Virtual Private Cloud (VPC) environment with associated subnets, instances, and security configurations.
+- This AWS CloudFormation template sets up a complete Virtual Private Cloud (VPC) environment with associated subnets, instances, and security configurations.
 
 Summary:
 The template creates a VPC (`MyVPC`) with a CIDR block of `172.16.0.0/16`, enabling DNS support and hostnames. It defines multiple subnets, including two public subnets and four private subnets across two availability zones, allowing for organized resource allocation. An Internet Gateway is attached to provide external access, along with a public route table to route traffic. A bastion host EC2 instance is deployed in one of the public subnets for secure SSH access, while application instances are created in the private subnets. Security groups are established to control traffic, enabling SSH access from the bastion host and ICMP access between instances, thus ensuring secure communication within the network. This configuration supports a robust and scalable cloud architecture.
