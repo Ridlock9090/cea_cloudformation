@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: 'CloudFormation for VPC'
+Description: 'CloudFormation Template for VPC with AutoScalingGroup'
 
 Resources:
 # My VPC
