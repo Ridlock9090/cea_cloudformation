@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: 'IAM CloudFormation Template'
+Description: 'IAM CloudFormation Template for S3 Bucket Policy'
 
 Resources:
   MyIAMUser:
