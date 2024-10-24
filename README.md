@@ -1,5 +1,5 @@
 # cea-cloudformation
-Site for my own CloudFormation Templates.
+**Site for my own CloudFormation Templates.**
 
 **This Repository includes the following:**
 
